@@ -53,12 +53,6 @@ if sys.version_info >= (3, 0) and platform.system() == 'Windows':
 #             pass
       
 
-
-if os.path.isdir("../src"):
-    if os.path.isdir("src"):
-        shutil.rmtree("src")
-    shutil.copytree("../src","src")
-
 extra_compile_args = []
 if ccompiler.get_default_compiler() == "msvc":
     extra_compile_args.append("/utf-8")
